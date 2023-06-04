@@ -18,7 +18,7 @@ else:
     # we are running in a normal Python environment
     WORKING_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_DIR = os.path.join(WORKING_DIR, 'config')
-RESULTS_DIR = os.path.join(WORKING_DIR, 'results')
+RESULTS_DIR = os.path.join(WORKING_DIR.removesuffix('\\doi'), 'results')
 RESULTS_FILENAME = 'results.json'
 SUPPORTED_CLASSES_FILENAME = 'supported-classes.json'
 CONFIG_CHOICES = ['default', 'tiny', 'openimages', 'custom']
