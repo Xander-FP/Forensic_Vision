@@ -3,7 +3,7 @@
 
 from Helper import isTrue
 from ImageObjectAnalyzer import ImageObjectAnalyzer
-from ImageIntegrityAnalyzer import ImageIntegrityAnalyzer
+# from ImageIntegrityAnalyzer import ImageIntegrityAnalyzer
 
 class Case:
     def __init__(self) -> None:
@@ -30,4 +30,5 @@ class Case:
             self.__object_analyzer = ImageObjectAnalyzer(folder_path=folder_path, keywords=keywords)
         if self.__flag_integrity:
             # Get input from user for the integrity analyzer
-            self.__integrity_analyzer = ImageIntegrityAnalyzer()
+            # self.__integrity_analyzer = ImageIntegrityAnalyzer()
+            pass
