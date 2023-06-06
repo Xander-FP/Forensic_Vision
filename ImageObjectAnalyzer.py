@@ -4,14 +4,10 @@
 #   keywords: The keywords to check for in the images or videos
 
 import os
+from Helper import *
 
 class ImageObjectAnalyzer:
-    def __init__(self, folder_path) -> None:
-        self.__folder_path = folder_path
-        self.__keywords = []
-
-    def __init__(self, folder_path, keywords) -> None:
-        self.__folder_path = folder_path
+    def __init__(self, keywords) -> None:
         self.__keywords = keywords
 
     def addKeyword(self, keyword):
@@ -29,7 +25,6 @@ class ImageObjectAnalyzer:
             res += keyword + ' '
         return res
     
-    def analyzeImages(self):
-        command = 'python doi/doi.py detect ' + self.__folder_path + ' --classes ' + self.getKeywords() + '--nogpu'
-        print(command)
+    def analyzeImages(self, folder_path):
+        command = 'python doi/doi.py detect ' + folder_path + ' --classes ' + self.getKeywords() + '--nogpu'
         os.system(command)

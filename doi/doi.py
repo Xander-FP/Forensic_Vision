@@ -102,7 +102,7 @@ def detect(args):
         detections = object_detector.apply_object_detection(converted_image if converted_image is not None else image)
         if detections is None:
             continue
-        print(os.path.abspath(image), f'(found {len(detections)} objects).')
+        print(os.path.abspath(image))
         # process detections found
         detections_handler.handle_detections(image, detections, not args.no_output_images)
         # saving the results in order to not loose information in case of something wrong
@@ -110,7 +110,6 @@ def detect(args):
 
     # output the results
     print('End of object detetion for all images.')
-    output_results(detections_handler.objects_images_dict, args.no_output_images)
 
 # get the classes the user choose to search for in images
 def get_classes_to_search_for(args): 
