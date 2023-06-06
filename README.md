@@ -12,6 +12,9 @@ Start the virtual environment:
 
 Install the following using pip:
     pip install numpy opencv-python pillow matplotlib keras==2.2.0 tensorflow==1.13.1 h5py==2.10.0 protobuf==3.20.*
-
+    pip install Pillow 
+    pip install imagehash 
+    
 Put weights files in folder config/weights. Download at least one from:
     http://pjreddie.com/media/files/yolov3.weights (recomended, for default configuration)
+    
