@@ -10,6 +10,12 @@ import utils.list as list_utils
 from core.object_detector import ObjectDetector
 from core.detections_handler import DetectionsHandler
 
+def removeSuffix(input, suffix):
+    if suffix and input.endswith(suffix):
+        return input[:-len(suffix)]
+    else:
+        return input
+
 # constants
 if getattr(sys, 'frozen', False):
     # we are running in a bundle (created by pyinstaller)
@@ -18,7 +24,7 @@ else:
     # we are running in a normal Python environment
     WORKING_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_DIR = os.path.join(WORKING_DIR, 'config')
-RESULTS_DIR = os.path.join(WORKING_DIR.removesuffix('\\doi'), 'results')
+RESULTS_DIR = os.path.join(removeSuffix(WORKING_DIR,'\\doi'), 'results')
 RESULTS_FILENAME = 'results.json'
 SUPPORTED_CLASSES_FILENAME = 'supported-classes.json'
 CONFIG_CHOICES = ['default', 'tiny', 'openimages', 'custom']

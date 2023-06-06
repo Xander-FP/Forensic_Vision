@@ -3,6 +3,7 @@
 
 import imagehash #need to install imagehash (pip install imagehash)
 from PIL import Image #need to install PIL (pip install Pillow)
+from DB import DB
 
 class ImageIntegrityAnalyzer:
     def __init__(self, original_image_path):
