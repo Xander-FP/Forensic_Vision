@@ -1,6 +1,6 @@
 # Forensic_Vision
 Combines tools from the following repos:
-     https://github.com/Xander-FP/DOI/tree/master/doi
+     https://github.com/Xander-FP/DOI/tree/master/doi and https://github.com/ISICV/ManTraNet/blob/master/Readme.md
 
 This tool was tested with python 3.11.3
 
